@@ -21,6 +21,7 @@ var client = webdriverio.remote(options);
 client
     .init()
     .url('https://duckduckgo.com/')
+    .waitForVisible('#search_form_input_homepage')
     .setValue('#search_form_input_homepage', 'WebdriverIO')
     .click('#search_button_homepage')
     .getTitle().then(function(title) {
